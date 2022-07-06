@@ -33,6 +33,7 @@
 //     return -1;
 // }
 
+//二分查找法-左闭右闭
 var search = function (nums, target) {
     // right是数组最后一个数的下标，num[right]在查找范围内，是左闭右闭区间
     let left = 0;
@@ -51,3 +52,20 @@ var search = function (nums, target) {
     }
     return -1;
 };
+
+//二分查找法-左闭右开
+// var search = function (nums, target) {
+//     let left = 0;
+//     let right = nums.length;
+//     while (left < right) {
+//         let mid = left + Math.floor((right - left) / 2);
+//         if (nums[mid] > target) {
+//             right = mid; // 去左面闭区间寻找
+//         } else if (nums[mid] < target) {
+//             left = mid + 1; // 去右面闭区间寻找
+//         } else {
+//             return mid;
+//         }
+//     }
+//     return -1;
+// };
